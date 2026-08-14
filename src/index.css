@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light only;
+  --ls-bg: #fdfcf9;
+  --ls-ink: #0b1a2e;
+  --ls-muted: #f4f6f9;
+  --ls-muted-fg: #64748b;
+  --ls-gold: #c5a059;
+  --ls-gold-2: #dab96e;
+  --ls-white: #ffffff;
+  --ls-border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--ls-bg);
+  --color-foreground: var(--ls-ink);
+  --color-muted: var(--ls-muted);
+  --color-muted-foreground: var(--ls-muted-fg);
+  --color-accent: var(--ls-gold);
+  --color-accent-secondary: var(--ls-gold-2);
+  --color-accent-foreground: var(--ls-white);
+  --color-border: var(--ls-border);
+  --color-card: var(--ls-white);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--ls-bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--ls-bg);
+  color: var(--ls-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgb(197 160 89 / 0.25);
+  color: var(--ls-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ls-gold);
+  outline-offset: 3px;
+}
+
+.container-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.section-padding {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+}
+
+.text-hero {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.text-heading-xl {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #c5a059 0%, #dab96e 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgb(197 160 89 / 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgb(197 160 89 / 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.hero-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 70% 20%, rgb(197 160 89 / 0.08) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cta-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgb(197 160 89 / 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+input,
+select,
+textarea {
+  color-scheme: light;
+}
