@@ -1,8 +1,9 @@
 import emailjs from '@emailjs/browser'
 
-export const EMAILJS_SERVICE_ID = 'service_d11l9hm'
-export const EMAILJS_TEMPLATE_ID = 'template_ftjc37g'
-export const EMAILJS_PUBLIC_KEY = 'togvWwcNfyP7yGd60'
+export const EMAILJS_SERVICE_ID = 'service_z9f6a0g'
+export const EMAILJS_TEMPLATE_ID = 'template_84etazo'
+export const EMAILJS_PUBLIC_KEY = 'LlVuJROza_oqOjp_A'
+
 
 function escapeHtml(value) {
   return String(value ?? '')
