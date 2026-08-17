@@ -11,9 +11,9 @@ export default function Layout() {
   }, [pathname])
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Navbar />
-      <main>
+      <main className="flex-1 pt-[72px]">
         <Outlet />
       </main>
       <Footer />

@@ -45,11 +45,11 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -16, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className={`sticky top-0 z-[100] flex min-h-[72px] items-center border-b backdrop-blur-[12px] backdrop-saturate-150 ${
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+        className={`fixed top-0 left-0 right-0 z-[100] flex min-h-[72px] w-full items-center transition-all duration-300 ${
           scrolled
-            ? 'border-border/80 bg-background/90'
-            : 'border-border/50 bg-background/85'
+            ? 'border-b border-border/80 bg-background/95 shadow-[0_4px_20px_rgba(11,26,46,0.06)] backdrop-blur-[16px] backdrop-saturate-150'
+            : 'border-b border-border/40 bg-background/90 backdrop-blur-[12px]'
         }`}
       >
         <div className="container-page flex w-full items-center justify-between gap-8">
